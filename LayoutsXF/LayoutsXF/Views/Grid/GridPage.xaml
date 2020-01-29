@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LayoutsXF.Views.Grid.GridPage" 
+             BackgroundColor="LightGray">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+            <Grid.ColumnDefinitions>
+                <!--Definição de Colunas-->
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="Auto"/> <!--Definie a largura a partir dos elementos da coluna-->
+                <ColumnDefinition Width="*"/> <!-- FillAndExpand-->
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!--Definição de Linhas (Pode usar Auto e * tbm)-->
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <BoxView Grid.Column="0" Grid.Row="0" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="1" Grid.Row="0" BackgroundColor="Gold" WidthRequest="50"/>
+            <BoxView Grid.Column="2" Grid.Row="0" BackgroundColor="Blue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

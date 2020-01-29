@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LayoutsXF.Views.Absolute.AbsolutePage" 
+             BackgroundColor="LightGray">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <!--LayoutBounds="X, Y, W, H"-->
+            <BoxView AbsoluteLayout.LayoutBounds="0, 0, 200, 100" BackgroundColor="Blue"/>
+            <BoxView AbsoluteLayout.LayoutBounds="50, 50, 100, 100" BackgroundColor="Green"/>
+            <BoxView AbsoluteLayout.LayoutBounds="250, 250, 50, 100" BackgroundColor="Red"/>
+
+
+            <!--LayoutFlags="" Permite definir que algum dos valore é proporcional a tela-->
+            <BoxView AbsoluteLayout.LayoutFlags="WidthProportional" AbsoluteLayout.LayoutBounds="0, 400, 0.8, 100" BackgroundColor="Yellow"/>
+            <BoxView AbsoluteLayout.LayoutFlags="SizeProportional" AbsoluteLayout.LayoutBounds="600, 600, 0.5, 0.5" BackgroundColor="Black"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

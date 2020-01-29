@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LayoutsXF.MainPage"
+             BackgroundColor="LightGray">
+
+    <StackLayout Orientation="Vertical" Padding="30">
+        <Label Text="Tipos de Layout Xamarin.Forms!"  
+           HorizontalOptions="Center"
+           VerticalOptions="Center" Padding="0,0,0,30"/>
+        <Button Text="StackLayout" Clicked="GoToStackPage" BackgroundColor="Blue" TextColor="White"/>
+        <Button Text="GridLayout" Clicked="GoToGridPage" BackgroundColor="Blue" TextColor="White"/>
+        <Button Text="AbsoluteLayout" Clicked="GoToAbsolutePage" BackgroundColor="Blue" TextColor="White"/>
+        <Button Text="RelativeLayout" Clicked="GoToRelativePage" BackgroundColor="Blue" TextColor="White"/>
+        <Button Text="Scroll" Clicked="GoToScrollPage" BackgroundColor="Blue" TextColor="White"/>
+    </StackLayout>
+
+</ContentPage>

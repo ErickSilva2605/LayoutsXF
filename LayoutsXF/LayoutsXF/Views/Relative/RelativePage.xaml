@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LayoutsXF.Views.Relative.RelativePage"
+             BackgroundColor="LightGray">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <!--Posicionamento Relativo a outro elemento-->
+            <!--Type define se o elemento estara relacionado a outro e de que maneira RelativeToParent(ao elemento pai) ou RelativeToView(outro elemento da tela)-->
+            <!--ElementName para indicar qual elemento se relaciona, se for ao elemento pai nao precisa utilizar.-->
+            <!--Property a porpriedade que sera utilizada-->
+            <!--Factor é um numero de 0 a 1 qu representa que sera utilizada da property-->
+            <!--Constant permite adicionar ou remover pixels do utilizado no fator-->
+            <BoxView RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5,Constant=-50}" BackgroundColor="Blue"/>
+            <BoxView x:Name="Vermelho" BackgroundColor="Red" Margin="300" HeightRequest="100" WidthRequest="100"/>
+            <BoxView RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Vermelho, Property=X, Factor=1,Constant=20}" 
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Vermelho, Property=Y, Factor=1,Constant=20}" 
+                     HeightRequest="100"
+                     WidthRequest="100"
+                     BackgroundColor="Green"/>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
